@@ -1,0 +1,23 @@
+<div class="cal-month-day <%= cls %>"
+     <% for(var i = 0; i < arrDatePendingApproval.length ; i++) { %>
+     <% if(data_day == arrDatePendingApproval[i]['request_date']) { %>
+     style="background-color: #F8EE56"
+     <% }} %>
+     <% for(var i = 0; i < arrDateApproved.length ; i++) { %>
+     <% if(data_day == arrDateApproved[i]['request_date']) { %>
+     style="background-color: #E6E6E6"
+     <% }} %>    >
+     <div class="cal-day-block" style="min-height: 22px;">
+        <span class="pull-left" style="" data-cal-date="<%= data_day %>" data-cal-view="day" data-toggle="tooltip" title="<%= tooltip %>"><%= day %></span>
+    </div>
+    <% for(var i = 0; i < arrDatePendingApproval.length ; i++) { %>
+    <% if(data_day == arrDatePendingApproval[i]['request_date']) { %>
+    <label><% print(arrDatePendingApproval[i]['position_name']); %></label>
+    <% }} %>
+
+    <% for(var i = 0; i < arrDateApproved.length ; i++) { %>
+    <% if(data_day == arrDateApproved[i]['request_date']) { %>
+    <label><% print(arrDateApproved[i]['position_name']); %></label>
+    <% }} %>
+    <br>
+</div>

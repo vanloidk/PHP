@@ -1,0 +1,89 @@
+<div class="cal-month-day <%= cls %>"
+     <% if (data_day == '2013-03-05') { %> style="background-color: #A5EDA5" <% } %>
+     <% if (data_day == '2013-03-06') { %> style="background-color: #8CDEF6" <% } %>
+     <% if (data_day == '2013-03-08') { %> style="background-color: #E6E6E6" <% } %>
+>
+    <div class="cal-day-block" style="min-height: 22px;">
+        <span class="pull-left" style=""data-cal-date="<%= data_day %>" data-cal-view="day" data-toggle="tooltip" title="<%= tooltip %>"><%= day %></span>
+<!--        <small class="cal-holiday badge badge-important pull-left"><%= tooltip %></small>-->
+    </div>
+    <br>
+    <% if (data_day == '2013-03-03') { %>
+    <div class="cal-event-block">
+        <label><input id="register-request-03" type="checkbox"> 出勤</label>
+    </div>
+    <% } %>
+
+    <% if (data_day == '2013-03-10') { %>
+    <div class="cal-event-block">
+        <label><input id="register-request-10" type="checkbox"> 出勤</label>
+    </div>
+    <% } %>
+
+    <% if (data_day == '2013-03-17') { %>
+    <div class="cal-event-block">
+        <label><input id="register-request-17" type="checkbox"> 出勤</label>
+    </div>
+    <% } %>
+
+    <% if (data_day == '2013-03-24') { %>
+    <div class="cal-event-block">
+        <label><input id="register-request-24" type="checkbox"> 出勤</label>
+    </div>
+    <% } %>
+
+    <% if (data_day == '2013-03-09') { %>
+    <div class="cal-event-block">
+        <label><input id="register-request-09" type="checkbox"> 出勤</label>
+    </div>
+    <% } %>
+
+    <% if (data_day == '2013-03-16') { %>
+    <div class="cal-event-block">
+        <label><input id="register-request-16" type="checkbox"> 出勤</label>
+    </div>
+    <% } %>
+
+    <% if (data_day == '2013-03-23') { %>
+    <div class="cal-event-block">
+        <label><input id="register-request-23" type="checkbox"> 出勤</label>
+    </div>
+    <% } %>
+
+    <% if (data_day == '2013-03-30') { %>
+    <div class="cal-event-block">
+        <label><input id="register-request-30" type="checkbox"> 出勤</label>
+    </div>
+    <% } %>
+
+    <!--request was in processed-->
+    <% if (data_day == '2013-03-05') { %>
+    <div class="cal-event-block">
+        <label> 出勤</label>
+    </div>
+    <% } %>
+
+    <% if (data_day == '2013-03-06') { %>
+    <div class="cal-event-block">
+        <label> 出勤</label>
+    </div>
+    <% } %>
+
+    <% if (data_day == '2013-03-08') { %>
+    <div class="cal-event-block">
+        <label> PM</label>
+    </div>
+    <% } %>
+    <!--request was in processed-->
+
+<!--    <span class="pull-left" style=""data-cal-date="<%= data_day %>" data-cal-view="day" data-toggle="tooltip" title="<%= tooltip %>"><%= day %></span>-->
+
+    <% if (events.length > 0) { %>
+    <div class="row list-events">
+        <% _.each(events, function(event, index) { %>
+
+        <% }); %>
+    </div>
+    <% } %>
+
+</div>
