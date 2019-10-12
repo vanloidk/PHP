@@ -17,7 +17,6 @@ namespace Fuel\Tasks;
  *
  * @package		Fuel
  * @version		1.0
- * @author		Bui Huu Phuc
  */
 class holiday
 {
@@ -29,8 +28,6 @@ class holiday
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
-     * @author Dao Anh Minh
      */
     public static function run()
     {
@@ -77,8 +74,6 @@ class holiday
      * @param string $calendar_id google calendar id
      * @return mixed
      *
-     * @author Bui Huu Phuc
-     * @author Dao Anh Minh
      */
     protected static function get_calendar($country, $google_api_key, $calendar_id)
     {
@@ -145,7 +140,6 @@ class holiday
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
      */
     protected static function log($txt)
     {
