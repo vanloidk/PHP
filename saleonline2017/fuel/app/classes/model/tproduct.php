@@ -138,7 +138,7 @@ class Model_Tproduct extends \Orm\Model {
         $query = Model_Tproduct::query()
                 ->where('category_id', $categoryId)
                 ->where('status', 1)
-                ->rows_limit(8)
+               // ->rows_limit(8)
                 ->get();
         return $query;
     }
@@ -148,7 +148,7 @@ class Model_Tproduct extends \Orm\Model {
         $query = Model_Tproduct::query()
                 ->where('category_id', $categoryId)
                 //  ->where('status', 0)
-                ->rows_limit(8)
+              //  ->rows_limit(8)
                 ->get();
         return $query;
     }

@@ -15,7 +15,7 @@
         <div class="container" >
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <a href="<?php echo Uri::base() . 'news/detail/' . $value->id ?>" >
+                    <a href="<?php echo Uri::base() . 'tintuc/' . str_replace("-", $value->name) . $value->id ?>" >
                         <img  src= "<?php echo Uri::base() ?>assets/imgnews/<?php echo $value->img; ?>">
                     </a>
                 </div>
@@ -25,7 +25,7 @@
             <div class="col-md-8">
                 <div>
                     <p style="color: blue;">
-                        <a href="<?php echo Uri::base() . 'news/detail/' . $value->id ?>" >
+                        <a href="<?php echo Uri::base() . 'tintuc/' . str_replace("-",  $value->name) . $value->id ?>" >
                             <?php echo $value->title; ?>
                         </a>
                     </p>

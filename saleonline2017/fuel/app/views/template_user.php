@@ -18,41 +18,43 @@
     </head>
     <body>
         <!-- top menu -->
-        <div style="padding: 1px" role="navigation" class="navbar">
+        <div style="padding: 1px" class="navbar">
             <?php
             //add css
             echo Asset::css(Uri::base() . 'assets/css/font-awesome.css', array(), null, false);
             echo Asset::css(Uri::base() . 'assets/css/font-awesome.min.css', array(), null, false);
 
             // menu top
-            echo "<div class='navbar-collapse'>";
+            echo "<div>";
             require_once 'common/top_menu.php';
             //require_once 'common/menu_bar_user.php';
             echo "</div>";
             ?>
 
             <!-- button responsive !-->
-            <div  role ="navigation" id = "nav-top" >
-                <!--<div class = "topmenu" > -->
-                <!--                <div class="container  navbar-inverse">
-                                    <div class="navbar-header" style="overflow-x: hidden !important;">
-                                        <button type = "button"  class ="navbar-toggle" data-toggle ="collapse" data-target = ".navbar-collapse">
-                                            <span class = "sr-only">Toggle navigation</span>
-                                            <span class = "icon-bar"></span>
-                                            <span class = "icon-bar"></span>
-                                            <span class = "icon-bar"></span>
-                                        </button>
-                                    </div>
-                                </div>-->
+            <div   >
+
+                <div class="container  navbar-inverse">
+                    <div class="navbar-header" style="overflow-x: hidden !important;">
+                        <button type = "button"  aria-controls="navbarToggler" class ="navbar-toggle collapsed" data-toggle ="collapse" data-target = "#navbarToggler">
+
+                            <span class = "sr-only">Toggle navigation</span>
+                            <span class = "icon-bar"></span>
+                            <span class = "icon-bar"></span>
+                            <span class = "icon-bar"></span>
+                        </button>
+                    </div>
+                </div>
+
 
                 <!-- menu bar !-->
                 <?php
-                echo "<div  class='navbar-collapse'>";
+                echo "<div  class='navbar-collapse collapse' id='navbarToggler'>";
                 require_once 'common/menu_bar.php';
                 echo "</div>";
                 //$controller = strtolower(substr(Request::active()->controller, 11));
                 //$action     = Request::active()->action;
-
+                //echo $controller; exit();
                 if (($controller == "account_visitor" || $controller == "account_user" || $controller == "product") && $action = "index") {
                     echo "<div>";
                     require_once 'common/banner_slider.php';
@@ -61,41 +63,45 @@
                 ?>
             </div>
         </div>
-        <div class="container" style="margin-top: -20px;">
+        <div style="margin-top: -20px;">
             <?php
             require_once 'common/menu_info.php';
             ?>
         </div>
+        <?php
+        $cssContent = "content-customize";
+        if (preg_match('/products_/', $controller)) {
+            $cssContent = "container_m_customer";
+        }
+        ?>
 
-
-        <div  class="container_customer">
-            <!--            <div class="navbar-left col-lg-2 content-page" >
+        <div class="<?php echo $cssContent ?>">
             <?php
-// require_once 'common/left_menu_visitor.php';
+            if ($cssContent == "content-customize") {
+                require_once 'common/content.php';
+            } else {
+                require_once 'common/content_menu.php';
+            }
             ?>
-                        </div>-->
-            <div class="back">
-                <!--box to show error, success, warning message-->
-                <?php if (Session::get_flash('success')): ?>
-                    <div class="message-area">
-                        <div class="alert alert-success " role="alert"><?php echo Security::clean(Session::get_flash('success'), array('htmlentities', 'xss_clean')) ?></div>
-                    </div>
-                <?php endif; ?>
-                <?php if (Session::get_flash('error')): ?>
-                    <div class="message-area">
-                        <div class="alert alert-danger " role="alert"><?php echo Security::clean(Session::get_flash('error'), array('htmlentities', 'xss_clean')) ?></div>
-                    </div>
-                <?php endif; ?>
 
-                <?php if (Session::get_flash('warning')): ?>
-                    <div class="message-area">
-                        <div class="alert alert-warning " role="alert"><?php echo Security::clean(Session::get_flash('warning'), array('htmlentities', 'xss_clean')) ?></div>
-                    </div>
-                <?php endif; ?>
-            </div>
-            <div class="navbar-right col-md-11">
-                <?php echo isset($content) ? $content : ''; ?>
-            </div> <!-- /container -->
+        </div>
+
+        <div>
+            <!-- smooth-scrolling-of-move-up -->
+            <script type="text/javascript">
+                $(document).ready(function () {
+
+                    //        var defaults = {
+                    //            containerID: 'toTop', // fading element id
+                    //            containerHoverID: 'toTopHover', // fading element hover id
+                    //            scrollSpeed: 1200,
+                    //            easingType: 'linear'
+                    //        };
+
+                    $().UItoTop({easingType: 'easeOutQuart'});
+
+                });
+            </script>
         </div>
         <!-- Placed at the end of the document so the pages load faster -->
         <?php echo Asset::render('js'); ?>

@@ -9,8 +9,8 @@ foreach ($account->delivery as $value) {
         <h3 class="page-header">Thông tin user</h3>
     </div>
     <?php echo Form::open(array('role' => 'form')); ?>
-    <div class="row" style="background: #5bc0de; padding-left: 15px;">
-        <img src="<?php echo Uri::base() . "assets/imglogin/lock.ico" ?>" style="width: 40px; height: 40px;"/>
+    <div class="row" style="background: #5BBD0B;">
+        <img src="<?php echo Uri::base() . "assets/imglogin/logininfo.jpg" ?>" style="width: 40px; height: 40px;"/>
         <h4 class="header_custom"><?php echo "Thông tin đăng nhập"; ?></h4>
     </div>
     <div class="row" style="padding-top: 10px;">
@@ -42,8 +42,8 @@ foreach ($account->delivery as $value) {
     </div>
 
 
-    <div class="row" style="background: #5bc0de; padding-left: 15px; margin-top: 10px;">
-        <img src="<?php echo Uri::base() . "assets/imglogin/user_info.ico" ?>" style="width: 40px; height: 40px; margin-top: -20px;"/>
+    <div class="row" style="background: #5BBD0B;">
+        <img src="<?php echo Uri::base() . "assets/imglogin/contactinfo.jpg" ?>" style="width: 40px; height: 40px;"/>
         <h4 class="header_custom"><?php echo "Thông tin liên hệ"; ?></h4>
     </div>
     <div class="row"  style="margin-top: 5px;">
@@ -133,7 +133,7 @@ foreach ($account->delivery as $value) {
     <div class="row"  style="margin-top: 20px; margin-left: 17%;">
         <div class="form-group">
             <?php echo Form::button('submit', "Cập nhật", array('class' => 'btn btn-primary')); ?>
-            <?php echo Html::anchor('product/', "Quay lại", array('class' => 'btn btn-warning')); ?>
+            <?php echo Html::anchor('sanpham/', "Quay lại", array('class' => 'btn btn-warning')); ?>
         </div>
 
     </div>

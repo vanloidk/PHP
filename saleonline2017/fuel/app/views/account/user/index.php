@@ -18,7 +18,7 @@
                 </h2>
             </div>
 
-            <div class="col-md-3 padding-product">
+            <div class="padding-product">
                 <div class="thumbnail">
                     <a href="<?php echo Uri::base() ?>products/shoe/" >
                         <img src= <?php echo Uri::base() ?>assets/mainuser/bongtai.jpg style="width: 90%; height: 250px;  padding-left: 5%;">
@@ -41,7 +41,7 @@
                 </h2>
             </div>
 
-            <div class="col-md-3 padding-product">
+            <div class="padding-product">
                 <div class="thumbnail">
                     <a href="<?php echo Uri::base() ?>products/shoe/" >
                         <img src= <?php echo Uri::base() ?>assets/mainuser/nhan.jpg style="width: 90%; height: 250px;  padding-left: 5%;">

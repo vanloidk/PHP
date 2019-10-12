@@ -61,7 +61,7 @@ $(document).ready(function() {
      * @param  $obj
      * @param {String} $type
      *
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     function calculate ($obj, $type) {
         // go up to root tr
@@ -117,7 +117,7 @@ $(document).ready(function() {
     /**
      * allow to enter number only
      *
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     function numberOnly ($obj, $e, $maxLength)
     {

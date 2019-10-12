@@ -3,12 +3,12 @@
 /**
  * /account.php
  *
- * @copyright Copyright (C) X -TRANS inc.
- * @author Dao Anh Minh
+ * @copyright 
+ * @author Nguyen Van Loi
  * @package tmd
  * @since Nov 6, 2014
  * @version $Id$
- * @license X -TRANS Develop License 1.0
+ * @license 
  */
 /**
  * Account
@@ -16,12 +16,12 @@
  * <pre>
  * </pre>
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
- * @author Dao Anh Minh
+ * @copyright 
+ * @author Nguyen Van Loi
  * @package tmd
  * @since Nov 6, 2014
  * @version $Id$
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 class Controller_Account_Addresses extends Controller_Base
 {
@@ -34,7 +34,7 @@ class Controller_Account_Addresses extends Controller_Base
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguen Van Loi
      */
     public function before()
     {
@@ -50,7 +50,7 @@ class Controller_Account_Addresses extends Controller_Base
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguen Van Loi
      */
     public function action_index()
     {

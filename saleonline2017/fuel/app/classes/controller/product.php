@@ -18,6 +18,7 @@ class Controller_product extends Controller_Base {
         $clocks      = Model_Tproduct::getProductsByCategoryID(1);
         //nhan 2
         $rings       = Model_Tproduct::getProductsByCategoryID(2);
+       // var_dump($rings); exit();
         //day chuyen 3
         $necklaces   = Model_Tproduct::getProductsByCategoryID(3);
         //lactay lacchan 4
@@ -103,11 +104,15 @@ class Controller_product extends Controller_Base {
     public function action_detail($id = null) {
 
         $view     = View::forge('products/detail');
-        $products = Model_Tproduct::getProducts($id);
+        
+        $ids = explode("-",$id);
+        $products = Model_Tproduct::getProducts($ids[count($ids)-1]);
 
+        $otherProducts = Model_Tproduct::getProductsByCategoryID($products->category_id);
         $this->template->title        = "details";
         $this->template->number_carts = count(Session::get('carts'));
         $view->products               = $products;
+        $view->otherProducts               = $otherProducts;
         $this->template->content      = $view;
     }
 
@@ -155,7 +160,7 @@ class Controller_product extends Controller_Base {
             Session::set('carts', $arr_cart2);
         }
 
-        Response::redirect('product/');
+        Response::redirect('sanpham');
     }
 
     /**

@@ -4,7 +4,7 @@
  * /account.php
  *
  * @copyright Copyright (C) X -TRANS inc.
- * @author Dao Anh Minh
+ * @author Ngyen Van Loi
  * @package tmd
  * @since Nov 6, 2014
  * @version $Id$
@@ -17,8 +17,8 @@
  * <pre>
  * </pre>
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
- * @author Dao Anh Minh
+ * @copyright 
+ * @author Ngyen Van Loi
  * @package tmd
  * @since Nov 6, 2014
  * @version $Id$
@@ -37,7 +37,7 @@ class Controller_actions extends Controller_Base
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Ngyen Van Loi
      */
     public function before()
     {
@@ -53,7 +53,7 @@ class Controller_actions extends Controller_Base
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Ngyen Van Loi
      */
     public function action_index()
     {

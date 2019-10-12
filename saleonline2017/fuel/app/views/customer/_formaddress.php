@@ -59,7 +59,18 @@
             ?>
         </div>
     </div>
-    <div class="row row_cus">
+
+    <div class="row row_cus" id="strictId">
+        <div class="col-lg-3">
+            <label>Quận/Huyện</label>
+        </div>
+        <div class="col-lg-offset-3" >
+            <?php echo Form::select('district', 'none', $district, array('class' => 'form-control', 'style' => 'width:250px; '));
+            ?>
+        </div>
+    </div>
+
+<!--    <div class="row row_cus">
         <div class="col-lg-3">
             <label>PostCode:</label>
         </div>
@@ -74,7 +85,7 @@
         <div class="col-lg-offset-3">
             <?php echo Form::input('county', !is_null($adress_account) ? $adress_account->country_id : "", array('class' => 'form-control')); ?>
         </div>
-    </div>
+    </div>-->
 
     <div class="row">
         <div class="col-lg-2" style="width: 150px;">
@@ -85,5 +96,3 @@
         </div>
     </div>
 </div>
-
-

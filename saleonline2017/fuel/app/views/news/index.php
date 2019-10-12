@@ -1,4 +1,4 @@
-<div class="content-customize">
+<div>
     <div class="row clearfix">
         <h4>
             TIN TỨC
@@ -15,17 +15,16 @@
         <div class="container" >
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <a href="<?php echo Uri::base() . 'news/detail/' . $value->id ?>" >
+                    <a href="<?php echo Uri::base() . 'tintuc/' . str_replace(" ", "-", $value->name) . "-" . $value->id . ".html" ?>" >
                         <img  src= "<?php echo Uri::base() ?>assets/imgnews/<?php echo $value->img; ?>">
                     </a>
                 </div>
             </div>
 
-
             <div class="col-md-8">
                 <div>
                     <p style="color: blue;">
-                        <a href="<?php echo Uri::base() . 'news/detail/' . $value->id ?>" >
+                        <a href="<?php echo Uri::base() . 'tintuc/' . str_replace(" ", "-", $value->name) . "-" . $value->id . ".html" ?>" >
                             <?php echo $value->title; ?>
                         </a>
                     </p>

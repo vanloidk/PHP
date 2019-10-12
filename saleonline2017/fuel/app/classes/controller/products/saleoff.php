@@ -102,7 +102,7 @@ class Controller_Products_Saleoff extends Controller_Base {
             Session::set('carts', $arr_cart2);
         }
 
-        Response::redirect('product/');
+        Response::redirect('sanpham');
     }
 
     /**

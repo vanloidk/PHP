@@ -4,6 +4,7 @@
     <!-- This demo works with jquery library -->
     <?php
     echo Asset::js(Uri::base() . 'assets/js/jquery-1.11.3.min.js');
+    echo Asset::js(Uri::base() . 'assets/js/wheelzoom.js');
     echo Asset::js(Uri::base() . 'assets/js/jssor.slider.mini.js');
     ?>
 

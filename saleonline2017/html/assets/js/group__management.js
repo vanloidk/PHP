@@ -33,7 +33,7 @@ $(document).ready(function(){
     /**
      * Show and hide shift work time
      *
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     function showShifPosition()
     {
@@ -43,7 +43,7 @@ $(document).ready(function(){
     /**
      * Show and hide shift work time
      *
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     function hideShiftPosition()
     {
@@ -53,7 +53,7 @@ $(document).ready(function(){
     /**
      * Show and hide shift work time
      *
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     function showShiftWork()
     {
@@ -69,7 +69,7 @@ $(document).ready(function(){
     /**
      * Hide shift work
      *
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     function hideShiftWork()
     {
@@ -85,7 +85,7 @@ $(document).ready(function(){
     /**
      * Show holiday flag
      *
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     function showHolidayFlag()
     {
@@ -100,7 +100,7 @@ $(document).ready(function(){
     /**
      * Hide holiday flag
      *
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     function hideHolidayFlag()
     {

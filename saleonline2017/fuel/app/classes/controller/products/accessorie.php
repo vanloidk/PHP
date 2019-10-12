@@ -142,7 +142,7 @@ class Controller_Products_accessorie extends Controller_Base {
             Session::set('carts', $arr_cart2);
         }
 
-        Response::redirect('product/');
+        Response::redirect('sanpham');
     }
 
     /**

@@ -2,26 +2,23 @@
     <nav id="form-group">
 
         <div class="inner-menubar">
-            <div id="ab"  >
-                <ul class="nav navbar-nav" id="mn_home" style="padding-left: 6%;">
+            <div >
+                <ul class="nav navbar-nav" id="mn_home">
                     <li>
-                        <a  class="pdleft" style="text-align: center;" href="<?php echo Uri::base() . 'product' ?>">HÀNG BÁN CHẠY</a>
+                        <a  class="pdleft" href="<?php echo Uri::base() . 'product' ?>">HÀNG BÁN CHẠY</a>
                     </li>
                 </ul>
             </div>
 
             <div  id="mn_saleoff" ondblclick="mnSaleOffClick()">
-
                 <ul class="nav navbar-nav">
-
-                    <li class="dropdown">
-
+                    <li>
                         <a href="<?php echo Uri::base() . 'product/saleoff/' ?>" class="dropdown-toggle pdleft" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <?php echo __('menubar.lbl_sale'); ?>
                             <span class="caret"></span>
                         </a>
 
-                        <ul class="dropdown-menu"  style="background: rgb(243, 120, 165);">
+                        <ul class="dropdown-menu"  style="background: #f20000;">
                             <li role="presentation">
                                 <a class="navbar-brand pdleft" href="<?php echo Uri::base() . 'products/clockSaleOff/'; ?>"><?php echo __('menubar.lbl_clock'); ?></a>
                             </li>
@@ -44,6 +41,8 @@
                         </ul>
                     </li>
                 </ul>
+
+
             </div>
 
             <!-- shoe !-->
@@ -55,7 +54,7 @@
                             <span class="caret"></span>
                         </a>
 
-                        <ul class="dropdown-menu" style="background: rgb(243, 120, 165);">
+                        <ul class="dropdown-menu" style="background:#f20000;">
                             <li role="presentation"  style="background: red;"> <a class="navbar-brand pdleft" href="<?php echo Uri::base() . 'products/clock/'; ?>"><?php echo __('menubar.lbl_clock'); ?></a></li>
                             <li role="presentation"> <a class="navbar-brand pdleft" href="<?php echo Uri::base() . 'products/ring/'; ?>"><?php echo __('menubar.lbl_ring'); ?></a></li>
                             <li role="presentation"> <a class="navbar-brand pdleft" href="<?php echo Uri::base() . 'products/earring/'; ?>"><?php echo __('menubar.lbl_earring'); ?></a></li>
@@ -68,35 +67,6 @@
                 </ul>
             </div>
 
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <!--            <div >
-                            <ul class="nav navbar-nav">
-                                <li class="dropdown active" id="mn_product">
-                                    <a href="#" class="dropdown-toggle pdleft" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <?php echo __('menubar.lbl_boy'); ?>
-                                        <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li role="presentation"> <a class="navbar-brand pdleft" href="<?php echo Uri::base() . 'products/laptop/' ?>"><?php echo __('menubar.lbl_shirt'); ?></a></li>
-                                        <li role="presentation"> <a class="navbar-brand pdleft" href="<?php echo Uri::base() . 'products/mobile/' ?>"><?php echo __('menubar.lbl_shoe'); ?></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div >
-                            <ul class="nav navbar-nav">
-                                <li class="dropdown active" id="mn_product">
-                                    <a href="#" class="dropdown-toggle pdleft" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <?php echo __('menubar.lbl_children'); ?>
-                                        <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li role="presentation"> <a class="navbar-brand pdleft" href="<?php echo Uri::base() . 'products/laptop/' ?>"><?php echo __('menubar.lbl_shirt'); ?></a></li>
-                                        <li role="presentation"> <a class="navbar-brand pdleft" href="<?php echo Uri::base() . 'products/mobile/' ?>"><?php echo __('menubar.lbl_shoe'); ?></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>-->
             <div id="mn_accessories" ondblclick="mnaccessoriesClick()">
                 <ul class="nav navbar-nav" id="component">
                     <li class="dropdown">
@@ -104,7 +74,7 @@
                             <?php echo __('menubar.lbl_accessories'); ?>
                             <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu" style="background: rgb(243, 120, 165);">
+                        <ul class="dropdown-menu" style="background: #f20000;">
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="<?php echo Uri::base() . 'products/backpack/' ?>" class="navbar-brand pdleft">
                                     <?php echo __('menubar.lbl_backpack'); ?>
                                 </a></li>
@@ -116,20 +86,23 @@
                 </ul>
             </div>
 
-            <div>
+            <div  class="nav navbar-right">
 
-                <form   role="search" class="input_search" action="<?php echo Uri::base() . 'product/search/' ?>" method="post">
+                <form role="search"  class="input_search" action="<?php echo Uri::base() . 'product/search/' ?>" method="post">
                     <ul class="nav navbar-nav">
-                        <li style="width: 350px;">
-                            <input type="text" value="" placeholder="Tìm sản phẩm của bạn......" name="txt_search" class="form-control"/>
+                        <li>
+                            <input style="margin-right: 350px;" type="text" value="" placeholder="Tìm kiếm sản phẩm......" name="txt_search" class="form-control"/>
                         </li>
-                        <li style="padding-left: 5px;">
-                            <button type="submit" class="btn btn-primary" style="background: #c12e2a;"> Search</button>
+                        <li >
+                            <button type="submit" class="btn" style="background: #f97777;">
+                                <span class="glyphicon glyphicon-search"></span> Search
+                            </button>
+
                         </li>
                     </ul>
                 </form>
 
-            </div>
+            </div>      
 
         </div>
     </nav> <!-- /.container-fluid -->

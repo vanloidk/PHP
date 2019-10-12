@@ -23,13 +23,13 @@
             <!-- message errors !-->
             <div class="row">
                 <?php if (Session::get_flash('success')): ?>
-                    <div class="message-area">
+                <div class="message-area">
                         <div class="alert-danger" role="alert"><?php echo Session::get_flash('success') ?></div>
                     </div>
                 <?php endif; ?>
                 <?php if (Session::get_flash('error')): ?>
-                    <div class="message-area">
-                        <div class="alert-danger" role="alert"><?php echo Session::get_flash('error') ?></div>
+                    <div>
+                        <div class="alert-danger" role="alert"  style="text-align: center; line-height: 40px; height: 40px;"><?php echo Session::get_flash('error') ?></div>
                     </div>
                 <?php endif; ?>
 

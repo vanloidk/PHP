@@ -3,7 +3,7 @@
 /**
  * /position.php
  *
- * @copyright Copyright (C) X-TRANS inc.
+ * @copyright 
  * @author Nguyen Van Loi
  * @package tmd
  * @since Nov 6, 2014
@@ -16,7 +16,7 @@
  * <pre>lnet
  * </pre>
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
+ * @copyright 
  * @author Nguyen Van Loi
  * @package tmd
  * @since Nov 6, 2014

@@ -155,7 +155,7 @@ class Controller_Products_jewelry extends Controller_Base {
             Session::set('carts', $arr_cart2);
         }
 
-        Response::redirect('product/');
+        Response::redirect('sanpham');
     }
 
     /**

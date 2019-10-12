@@ -3,12 +3,12 @@
 /**
  * /validation.php
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
- * @author Bui Huu Phuc
+ * @copyright 
+ * @author Nguyen Van Loi
  * @package optask
  * @since Sep 4, 2014
  * @version $Id$
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 
 /**
@@ -17,11 +17,11 @@
  * <pre>
  * </pre>
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
- * @author Bui Huu Phuc
+ * @copyright 
+ * @author Nguyen Van Loi
  * @package optask
  * @version 1.0
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 class Validation extends Fuel\Core\Validation {
 
@@ -38,7 +38,7 @@ class Validation extends Fuel\Core\Validation {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     public function run($input = null, $allow_partial = false, $temp_callables = array()) {
         if ($input == null) {
@@ -56,7 +56,7 @@ class Validation extends Fuel\Core\Validation {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public static function _validation_username($val) {
         Validation::active()->set_message('username', __('message.the_field_:label_is_invalid_account'));
@@ -103,7 +103,7 @@ class Validation extends Fuel\Core\Validation {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public static function _validation_username_unique($val, $id = null) {
         Validation::active()->set_message('username_unique', __('message.this_:label_already_exists'));
@@ -134,7 +134,7 @@ class Validation extends Fuel\Core\Validation {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public static function _validation_starttime($val, $end) {
         $result = $val < $end;
@@ -152,7 +152,7 @@ class Validation extends Fuel\Core\Validation {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public static function _validation_endtime($val, $start) {
         $result = $val > $start;
@@ -168,7 +168,7 @@ class Validation extends Fuel\Core\Validation {
      * @return boolean result of validate
      *
      * @access public
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     public static function _validation_number($val) {
         Validation::active()->set_message('number', __('message.please_enter_:label_correct_number'));
@@ -184,7 +184,7 @@ class Validation extends Fuel\Core\Validation {
      * @return boolean result of validate
      *
      * @access protected
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     protected static function validate_date($data, $format = '') {
         $valid = DateTime::createFromFormat($format, $data);
@@ -200,7 +200,7 @@ class Validation extends Fuel\Core\Validation {
      * @return boolean result of validate
      *
      * @access public
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     public static function _validation_time($val) {
         Validation::active()->set_message('time', __('message.this_:label_format_is_HH:MM'));
@@ -216,7 +216,7 @@ class Validation extends Fuel\Core\Validation {
      * @return boolean result of validate
      *
      * @access public
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      *
      * @version 1.0
      * @since 1.0
@@ -236,7 +236,7 @@ class Validation extends Fuel\Core\Validation {
      * @return boolean result of validate
      *
      * @access public
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      *
      * @version 1.0
      * @since 1.0
@@ -254,7 +254,7 @@ class Validation extends Fuel\Core\Validation {
      * @return boolean resutl of validate
      *
      * @access public
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      *
      * @version 1.0
      * @since 1.0
@@ -291,7 +291,7 @@ class Validation extends Fuel\Core\Validation {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public static function _validation_old_password($val) {
         Validation::active()->set_message('old_password', __('message.this_:label_does_not_match_current_password'));
@@ -307,7 +307,7 @@ class Validation extends Fuel\Core\Validation {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public static function _validation_new_password($val) {
         Validation::active()->set_message('new_password', __('message.new_password_is_the_same_as_current_password'));
@@ -323,7 +323,7 @@ class Validation extends Fuel\Core\Validation {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public static function _validation_confirm_password($val) {
         Validation::active()->set_message('confirm_password', __('message.new_password_does_not_match_confirmed_password'));
@@ -340,7 +340,7 @@ class Validation extends Fuel\Core\Validation {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public static function _validation_primary_group() {
         Validation::active()->set_message('primary_group', __('message.please_select_:label'));

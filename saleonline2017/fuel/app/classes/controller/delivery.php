@@ -91,7 +91,7 @@ class Controller_Delivery extends Controller_Base {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Ngyen Van Loi
      */
     public function action_register() {
         $view                    = View::forge('account/register');
@@ -108,7 +108,7 @@ class Controller_Delivery extends Controller_Base {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Ngyen Van Loi
      */
     public function action_edit() {
         $view                    = View::forge('account/edit');
@@ -125,6 +125,8 @@ class Controller_Delivery extends Controller_Base {
         $address_accout = Model_Mdelivery::get_address_by_user_id($account_info[1], 1);
 
         $view->city              = $this->getCity();
+        $view->district              = $this->getDistrict(1);
+        
         $view->store_account     = $store_account;
         $view->adress_account    = $address_accout;
         $this->template->title   = "Depdocla | thanh toán";
@@ -178,6 +180,7 @@ class Controller_Delivery extends Controller_Base {
         }
 
         $view->city              = $this->getCity();
+        $view->district              = $this->getDistrict(1);
         $view->store_account     = $store_account;
         $view->adress_account    = $address_account;
         $this->template->title   = "Depdocla | thanh toán";
@@ -290,7 +293,7 @@ class Controller_Delivery extends Controller_Base {
                 Session::delete('carts');
                 Session::delete('order');
                 Session::delete('orderdtl');
-                Response::redirect("product/");
+                Response::redirect("sanpham");
             } else {
                 Session::set_flash('error', "process failed");
             }
@@ -334,4 +337,14 @@ class Controller_Delivery extends Controller_Base {
 //        }
 //        $this->template->content = $view;
 //    }
+
+    public function action_changecity($city_id) {
+
+        $view         = View::forge('customer/checkout01');
+        $view->district = $this->getDistrict($city_id);
+        
+        
+        $this->template->content = $view;
+    }
+
 }

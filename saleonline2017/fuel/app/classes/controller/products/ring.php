@@ -3,12 +3,12 @@
 /**
  * /position.php
  *
- * @copyright Copyright (C) X-TRANS inc.
+ * @copyright 
  * @author Nguyen Van Loi
  * @package tmd
  * @since Nov 6, 2014
  * @version $Id$
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 
 /**
@@ -17,12 +17,12 @@
  * <pre>
  * </pre>
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
+ * @copyright 
  * @author Nguyen Van Loi
  * @package tmd
  * @since Nov 6, 2014
  * @version $Id$
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 class Controller_Products_ring extends Controller_Base {
 
@@ -44,7 +44,7 @@ class Controller_Products_ring extends Controller_Base {
             'show_last'      => true,
             'first-marker'   => 'First',
             'last-marker'    => 'Last',
-            'pagination_url' => 'http://localhost:8080/saleonline/html/products/ring/',
+            'pagination_url' => 'http://localhost:80/saleonline/html/products/ring/',
             'total_items'    => $total_items,
             'per_page'       => PER_PAGE,
             // or if you prefer pagination by query string
@@ -56,6 +56,7 @@ class Controller_Products_ring extends Controller_Base {
 
         $view                         = View::forge('products/ring/index');
         $view->rings                  = $tproduct;
+       
         $view->pagination             = $pagination;
         $this->template->title        = "Nhẫn ";
         $this->template->number_carts = count(Session::get('carts'));

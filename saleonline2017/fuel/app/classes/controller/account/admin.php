@@ -3,12 +3,12 @@
 /**
  * /approver.php
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
+ * @copyright 
  * @author Nguyen Van Loi
  * @package saleonline
  * @since Nov 20, 2014
  * @version $Id$
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 
 /**
@@ -17,12 +17,12 @@
  * <pre>
  * </pre>
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
+ * @copyright 
  * @author Nguyen Van Loi
  * @package saleonline
  * @since Nov 20, 2014
  * @version $Id$
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 use Auth\Model\Auth_User;
 
@@ -41,7 +41,7 @@ class Controller_Account_admin extends Controller_Base {
      * @since 1.0
      * @version 1.0
      * @access public
-     * @author Nguyen Van Loi
+     * @author 
      */
     public function action_index() {
 

@@ -20,7 +20,7 @@ class Model_Holiday extends Model
      *
      * @var ORM relation property
      *
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      * @access protected
      */
     protected static $_belongs_to = array(
@@ -47,7 +47,7 @@ class Model_Holiday extends Model
      * @return array contains only groups id
      *
      * @access public
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      *
      * @version 1.0
      * @since 1.0
@@ -74,7 +74,7 @@ class Model_Holiday extends Model
      * @return array all holidays in month
      *
      * @access public
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     public static function get_all_holidays_in_month($request_type_id)
     {

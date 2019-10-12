@@ -23,24 +23,26 @@
                 <div class="col-md-3 padding-product">
                     <div class="thumbnail">
                         <div>
-                            <img alt="800:  Size 3m - 24m. 1 ri 15 trộn sz và mầu theo tỷ lệ hàng về - From to, Chất đẹp" style="width: 220px; height: 140px;" src= <?php echo Uri::base() ?>assets/img/<?php echo $value->img; ?>>
+                            <a href="<?php echo Uri::base() ?>product/detail/<?php echo $key; ?>">
+                                <img style="width: 100%; height: 180px;" src= <?php echo Uri::base() ?>assets/img/<?php echo $value->img; ?>>
+                            </a>
                         </div>
                         <div class="caption">
-                            <p style="text-align: center;">
-                                <?php echo $value->name; ?>
-                            </p>
-                            <p style="color: red;">
-                                <?php echo "Giá: " . $value->price; ?>
-                            </p>
-                            <?php if ($value->status == 1): ?>
-                                <p style="color: red; float: left;">
-                                    <?php echo "Sale Off : " . $value->saleoff . '%'; ?>
+                            <div>
+                                <p style="text-align: left;">
+                                    <?php echo $value->name; ?>
                                 </p>
-
-                            <?php endif; ?>
-                            <p style="padding-left: 70%;">
-                                <a class="btn btn-primary" href="<?php echo Uri::base() ?>product/detail/<?php echo $key; ?>">Chi tiết</a>
-                            </p>
+                            </div>
+                            <div style="padding-bottom: 10px;">
+                                <span style="color: red;">
+                                    <?php echo "Giá: " . $value->price; ?> 
+                                </span>
+                                <span style="color:darkgrey; ">
+                                    <?php if ($value->status == 1): ?>
+                                        <?php echo "|| Giảm Giá : " . $value->saleoff . '%'; ?>
+                                    <?php endif; ?>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>

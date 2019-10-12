@@ -26,7 +26,7 @@ class Model_Authority extends \Orm\Model
      * @return array authority of an account
      *
      * @access public
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public static function get_authority($account_id)
     {

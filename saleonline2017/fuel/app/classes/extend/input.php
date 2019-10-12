@@ -3,12 +3,12 @@
 /**
  * /input.php
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
- * @author Dao Anh Minh
+ * @copyright 
+ * @author Nguyen Van Loi
  * @package tmd
  * @since Nov 21, 2014
  * @version $Id$
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 
 /**
@@ -17,12 +17,12 @@
  * <pre>
  * </pre>
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
- * @author Dao Anh Minh
+ * @copyright 
+ * @author Nguyen Van Loi
  * @package tmd
  * @since Nov 21, 2014
  * @version $Id$
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 class Input extends Fuel\Core\Input
 {
@@ -36,7 +36,7 @@ class Input extends Fuel\Core\Input
      *
      * @access public
      *
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      * @version 1.0
      * @since 1.0
      */
@@ -61,7 +61,7 @@ class Input extends Fuel\Core\Input
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public static function get_field_value($index = null, $object = null, $key = null, $default = '')
     {
@@ -86,7 +86,7 @@ class Input extends Fuel\Core\Input
  *
  * @access public
  *
- * @author Dao Anh Minh
+ * @author Nguyen Van Loi
  * @version 1.0
  * @since 1.0
  */

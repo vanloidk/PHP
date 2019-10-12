@@ -3,11 +3,11 @@
 /**
  * /form.php
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
- * @author Bui Huu Phuc
+ * @copyright 
+ * @author Nguyen Van Loi
  * @package tmd
  * @version $Id$
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 
 /**
@@ -16,11 +16,11 @@
  * <pre>
  * </pre>
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
- * @author Bui Huu Phuc
+ * @copyright 
+ * @author Nguyen Van Loi
  * @package tmd
  * @version 1.0
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 class Form extends Fuel\Core\Form
 {
@@ -35,7 +35,7 @@ class Form extends Fuel\Core\Form
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public static function error($key, $err)
     {

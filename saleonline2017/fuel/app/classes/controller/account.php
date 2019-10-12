@@ -25,7 +25,7 @@ class Controller_Account extends Controller_Base {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public function action_index() {
         $view                    = View::forge('account/index');
@@ -41,7 +41,7 @@ class Controller_Account extends Controller_Base {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public function action_register() {
         $view                    = View::forge('account/register');
@@ -58,7 +58,7 @@ class Controller_Account extends Controller_Base {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public function action_edit() {
         $view                    = View::forge('account/edit');

@@ -50,7 +50,7 @@
 
         <div class="row" style="padding-left: 48%;">
             <div class="col-lg-2">
-                <a href="<?php echo Uri::base() . "product/"; ?>" class="btn btn-info" >Tiếp tục mua hàng </a>
+                <a href="<?php echo Uri::base() . "sanpham"; ?>" class="btn btn-info" >Tiếp tục mua hàng </a>
             </div>
             <div class="col-lg-2" style="padding-left: 14%;">
                 <button type="submit" class="btn btn-info" >Thanh toán</button>

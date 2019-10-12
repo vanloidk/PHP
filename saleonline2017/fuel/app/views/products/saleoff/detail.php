@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="thumbnail">
-                    <img alt="300x250" src= <?php echo Uri::base() ?>assets/img/<?php echo $products->img; ?>>
+                    <img class="zoom" style="width: 350px; height: 320px;" src= <?php echo Uri::base() ?>assets/img/<?php echo $products->img; ?>>
                 </div>
             </div>
             <div class="col-md-offset-4">

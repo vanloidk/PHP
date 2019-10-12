@@ -3,12 +3,12 @@
 /**
  * /user.php
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
- * @author Bui Huu Phuc
+ * @copyright 
+ * @author Nguen Van Loi
  * @package tmd
  * @since Nov 14, 2014
  * @version $Id$
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 
 /**
@@ -17,12 +17,12 @@
  * <pre>
  * </pre>
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
- * @author Bui Huu Phuc
+ * @copyright 
+ * @author Nguen Van Loi
  * @package tmd
  * @since Nov 14, 2014
  * @version $Id$
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 class Controller_Account_Visitor extends Controller_Base {
 

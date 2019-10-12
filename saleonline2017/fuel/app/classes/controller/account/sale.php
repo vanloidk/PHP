@@ -3,12 +3,12 @@
 /**
  * /approver.php
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
+ * @copyright 
  * @author Nguyen Van Loi
  * @package tmd
  * @since Nov 20, 2014
  * @version $Id$
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 
 /**
@@ -17,12 +17,12 @@
  * <pre>
  * </pre>
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
+ * @copyright 
  * @author Nguyen Van Loi
  * @package saleonline
  * @since Nov 20, 2014
  * @version $Id$
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 class Controller_Account_Sale extends Controller_Base {
 

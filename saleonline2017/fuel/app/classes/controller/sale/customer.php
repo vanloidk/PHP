@@ -10,7 +10,7 @@ class Controller_Sale_Customer extends Controller_Base {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public function before() {
         parent::before();
@@ -26,7 +26,7 @@ class Controller_Sale_Customer extends Controller_Base {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public function action_index() {
 
@@ -80,7 +80,7 @@ class Controller_Sale_Customer extends Controller_Base {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public function action_register() {
         $view                    = View::forge('sale/customer/register');
@@ -159,7 +159,7 @@ class Controller_Sale_Customer extends Controller_Base {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public function action_detail($id) {
         $view                    = View::forge('sale/customer/detail');

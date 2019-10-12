@@ -57,7 +57,7 @@ class Model_Account extends \Orm\Model {
      * @return object return a validation object
      *
      * @access public
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public static function validate($action = null, $id = null) {
         $val = Validation::forge($action);
@@ -169,7 +169,7 @@ class Model_Account extends \Orm\Model {
      * @return object return a validation object
      *
      * @access public
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public static function validate_login() {
         $val = Validation::forge();
@@ -205,7 +205,7 @@ class Model_Account extends \Orm\Model {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      */
     public static function get_all_language() {
         $countries = parse_ini_file(USER_CONFIG_PATH . '/country_language.ini', true);
@@ -222,7 +222,7 @@ class Model_Account extends \Orm\Model {
      * @return primary group name
      *
      * @access public
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      *
      */
     public function get_primary_group() {
@@ -251,7 +251,7 @@ class Model_Account extends \Orm\Model {
      * @return authority name (Comma-separated)
      *
      * @access public
-     * @author Bui Huu Phuc
+     * @author Nguyen Van Loi
      *
      */
     public function get_authority() {

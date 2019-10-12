@@ -23,7 +23,7 @@ class Model_Cart extends \Orm\Model
      *
      * @var property of ORM package
      * @access protected
-     * @author Nguyen Van Hiep
+     * @author Nguyen Van Loi
      */
     protected static $_has_one = array(
         'counter' => array(

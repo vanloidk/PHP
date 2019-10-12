@@ -3,12 +3,12 @@
 /**
  * /user.php
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
- * @author Bui Huu Phuc
+ * @copyright 
+ * @author Nguen Van Loi
  * @package tmd
  * @since Nov 14, 2014
  * @version $Id$
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 
 /**
@@ -17,12 +17,12 @@
  * <pre>
  * </pre>
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
- * @author Bui Huu Phuc
+ * @copyright 
+ * @author Nguen Van Loi
  * @package tmd
  * @since Nov 14, 2014
  * @version $Id$
- * @license X-TRANS Develop License 1.0
+ * @license 
  */
 class Controller_Account_user extends Controller_Base {
 
@@ -78,12 +78,12 @@ class Controller_Account_user extends Controller_Base {
                     Session::set('login_port', USER_PORT);
                     if (Auth::login()) {
                         Session::set('login_port', USER_PORT);
-                        Response::redirect('product/');
+                        Response::redirect('sanpham');
                     } else {
 
                         //var_dump("aaa");
                         Session::set('login_port', VISITOR_PORT);
-                        Response::redirect('product/');
+                        Response::redirect('sanpham');
                         //Session::set_flash('error', "login failed");
                     }
                 } else {

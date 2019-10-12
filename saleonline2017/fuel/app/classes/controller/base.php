@@ -37,6 +37,19 @@ class Controller_Base extends Controller_Template {
         } else {
             $this->template = 'template_user';
         }
+
+        $tg      = time();
+        $tgout   = 900;
+        $newTime = $tg - $tgout;
+
+        //delete user offline
+        Model_UserOnline::delete_userOffline($newTime);
+        //insert user online
+        $this->addUserOnline();
+
+        //user online
+        $userOnlines = Model_UserOnline::get_useronline();
+        //var_dump($userOnlines); exit();
         //before
         parent::before();
 
@@ -51,6 +64,7 @@ class Controller_Base extends Controller_Template {
         $this->template->set('action', $this->action);
         $this->template->set('language', json_encode($arr_lang['javascript']), false);
         $this->template->set('user', $user);
+        $this->template->set('user_online', count($userOnlines));
     }
 
     /**
@@ -81,7 +95,7 @@ class Controller_Base extends Controller_Template {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Ngyen Van Loi
      */
     public function action_logout() {
 
@@ -100,7 +114,7 @@ class Controller_Base extends Controller_Template {
             Session::destroy();
             Session::set('login_port', VISITOR_PORT);
 
-            Response::redirect("/product/");
+            Response::redirect("/sanpham");
             // Response::redirect("account/visitor/");
         }
         exit();
@@ -114,7 +128,7 @@ class Controller_Base extends Controller_Template {
      * @access public
      * @since 1.0
      * @version 1.0
-     * @author Bui Huu Phuc
+     * @author Ngyen Van Loi
      */
     public function action_change_password() {
         $view      = View::forge('common/change_password');
@@ -155,6 +169,13 @@ class Controller_Base extends Controller_Template {
         $this->addCss('bootstrap-datetimepicker.min.css');
         $this->addCss('style.css');
         $this->addCss('jquery-ui.css');
+        $this->addCss('bootstrap.css');
+        $this->addCss('owl.carousel.min.css');
+        $this->addCss('icomoon.css');
+        $this->addCss('owl.theme.default.min.css');
+        
+        $this->addCss('ui.totop.css');
+
         // $this->addCss('ckeditor/contents.css');
         //$this->addCss('font-awesome.css');
         //$this->addCss('font-awesome.min.css');
@@ -164,7 +185,7 @@ class Controller_Base extends Controller_Template {
      * load base js
      *
      * @access public
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     public function baseJs() {
         //$this->addJs('jquery-ui.js');
@@ -188,9 +209,19 @@ class Controller_Base extends Controller_Template {
         $this->addJs('admin.js');
         $this->addJs('user.js');
         $this->addJs('menutop.js');
-        $this->addJs('ckeditor/ckeditor.js');
-        $this->addJs('ckeditor/config.js');
-        $this->addJs('ckeditor/styles.js');
+        //  $this->addJs('ckeditor/ckeditor.js');
+        //  $this->addJs('ckeditor/config.js');
+        // $this->addJs('ckeditor/styles.js');
+
+        $this->addJs('bootstrap-rating-input.min.js');
+        $this->addJs('mainCarousel.js');
+        $this->addJs('owl.carousel.min.js');
+        $this->addJs('jquery.waypoints.min.js');
+     
+        $this->addJs('jquery.ui.totop.js');
+        $this->addJs('easing.js');
+
+
         //$this->addJs('jssor.slider.mini.js');
         //$this->addJs('jssor.slider.min.js');
         //$this->addJs('bootstrap.js');
@@ -203,7 +234,7 @@ class Controller_Base extends Controller_Template {
      * @param string $file name of css file
      *
      * @access public
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     public function addCss($file) {
         Asset::css($file, array(), 'css', false);
@@ -215,7 +246,7 @@ class Controller_Base extends Controller_Template {
      * @param string $file name of js file
      *
      * @access public
-     * @author Dao Anh Minh
+     * @author Nguyen Van Loi
      */
     public function addJs($file) {
         Asset::js($file, array(), 'js', false);
@@ -227,7 +258,7 @@ class Controller_Base extends Controller_Template {
      * @return mix
      *
      * @access public
-     * @author Bui Huu Phuc
+     * @author Ngyen Van Loi
      */
     protected function check_permission() {
         //get controller name and action name
@@ -267,7 +298,7 @@ class Controller_Base extends Controller_Template {
                 echo 'not_logged_in';
                 exit();
             }
-            Response::redirect("account/user/login");
+            Response::redirect("account/login");
             exit();
         }
 
@@ -329,14 +360,37 @@ class Controller_Base extends Controller_Template {
     }
 
     public function getCity() {
-        $city = array("Tp. Hồ Chí Minh", "An Giang", "Bắc Cạn", "Bạc Liêu", "Bắc Ninh",
-            "Bến Tre", "Bình Dương", "Bình Phước", "Bình Thuận", "Bình Định", "Cà Mau",
-            "Cần Thơ", "Cao Bằng", "Gia Lai", "Hà Giang", "Hà Nam", "Hà nội", "Hà Tây",
-            "Hà Tĩnh", "Hải Dương", "Hải phòng", "Hậu Giang", "Hòa Bình", "Hưng Yên",
-            "Huế", "Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng"
+        $city = array("Select", "Tp. Hồ Chí Minh", "Other"
         );
         return $city;
     }
 
-    
+    public function getDistrict($numStrict) {
+        switch ($numStrict) {
+            case 1:
+                $strict = array("Quận 1", "Quận 2", "Quận 3", "Quận 4", "Quận 5",
+                    "Quận 6", "Quận 7", "Quận 8", "Quận 9", "Quận 10", "Quận 11",
+                    "Quận 12", "Gò Vấp", "Tân Bình", "Tân Phú", "Bình Thạnh", "Phú Nhuận", "Bình Tân",
+                    "Thủ Đức", "Bình Chánh", "Cần Giờ", "Nhà Bè", "Hooc Môn", "Củ Chi"
+                );
+                break;
+
+            default:
+                $strict = array();
+                break;
+        }
+
+        return $strict;
+    }
+
+    public function addUserOnline() {
+
+        $userOnline              = new Model_UserOnline();
+        $userOnline->ip          = $_SERVER['REMOTE_ADDR'];
+        $userOnline->sessionId   = Cookie::get("PHPSESSID");
+        $userOnline->path_access = $_SERVER['PHP_SELF'];
+        $userOnline->time_temp   = time();
+        $userOnline->save();
+    }
+
 }

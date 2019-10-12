@@ -3,8 +3,8 @@
 /**
  * /const.php
  *
- * @copyright Copyright (C) 2014 X-TRANS inc.
- * @author Bui Huu Phuc
+ * @copyright 
+ * @author Nguyen Van Loi
  * @package tmd
  * @since Nov 19, 2014
  * @version $Id$
@@ -148,4 +148,4 @@ define('FIRST_WEEK_IN_MONTH', 1);
 //define('USER_CONFIG_PATH',   'C:\xampp\htdocs\tmd\config');
 
 define('USER_CONFIG_PATH', 'C:\xamppAdmin\htdocs\saleonline\config');
-define('PER_PAGE', 14);
+define('PER_PAGE', 16);

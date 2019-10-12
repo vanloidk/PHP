@@ -8,6 +8,27 @@ function __(key) {
 
 $(function () {
 
+    $('#form_city').change(function () {
+
+        $.ajax({
+            url: base_url + "delivery/changecity/",
+            type: "POST",
+            data: {city_id: $(this).val()},
+            cache: false,
+            processData: false,
+            success: function () {
+            },
+            error: function () {
+                alert("error");
+            }
+        });
+
+
+    });
+
+
+
+
     $("#formUpload").on('submit', (function (e) {
         var btn = $(this).find("input[type=submit]:focus").val();
         if (btn == "Upload")
@@ -160,13 +181,18 @@ $(function () {
     $(".padding-product .thumbnail").mouseover(function () {
         $(this).css('border-color', '#B8E834');
     });
-    
+
     $(".padding-product .thumbnail").mouseleave(function () {
 
         $(this).css('border-color', '#9e9690');
     });
 
- 
+    $('#offcanvasleft').click(function () {
+        $('.row-offcanvas-left').toggleClass('active');
+    });
 
+    $('[data-toggle=offcanvasright]').click(function () {
+        $('.row-offcanvas-right').toggleClass('active');
+    });
 });
 
